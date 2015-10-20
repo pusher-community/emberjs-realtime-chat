@@ -4,16 +4,18 @@ import ENV from 'pusher-chat/config/environment';
 
 export default Ember.Component.extend({
   currentUser: Ember.inject.service('current-user'),
-  messages: [],
+  pusher: Ember.inject.service('pusher'),
+  messages: ['Hi there!', 'Welcome to your chat app!'].map((message) => {
+    return {
+      username: 'pusher',
+      time: new Date(),
+      text: message,
+    };
+  }),
   init() {
     this._super(...arguments);
-    this.set('pusher', new Pusher(ENV.APP.PUSHER.key, {
-      encrypted: true,
-    }));
 
-    const channel = this.get('pusher').subscribe('messages');
-
-    channel.bind('new_message', (data) => {
+    this.get('pusher').onMessage((data) => {
       this.get('messages').pushObject(data);
     });
   },
