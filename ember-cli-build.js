@@ -6,6 +6,7 @@ module.exports = function(defaults) {
     // Add options here
   });
 
+  app.import('bower_components/pusher/dist/pusher.min.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //
