@@ -1,0 +1,11 @@
+This is going to ask for the chat username
+
+{{#if nameIsSet}}
+  {{#chat-messages username=userName}}{{/chat-messages}}
+{{else}}
+  {{input placeholder="jack" value=userName}}
+
+  <button {{action "userSubmittedName"}}>
+    Start chat
+  </button>
+{{/if}}
