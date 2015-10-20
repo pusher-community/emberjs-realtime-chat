@@ -46,5 +46,14 @@ module.exports = function(environment) {
 
   }
 
+  ENV['contentSecurityPolicy'] = {
+    'default-src': "'none'",
+    'script-src': "'self' https://stats.pusher.com/",
+    'connect-src': "'self' wss://ws.pusherapp.com/",
+    'img-src': "'self'",
+    'style-src': "'self'",
+    'media-src': "'self'",
+  }
+
   return ENV;
 };

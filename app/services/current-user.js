@@ -7,6 +7,10 @@ export default Ember.Service.extend({
     this._super(...arguments);
   },
 
+  user() {
+    return this.get('currentUser');
+  },
+
   setUser(username) {
     this.set('currentUser', username);
   },
