@@ -2,7 +2,7 @@
 
 <ul>
   {{#each messages as |message|}}
-    <li>{{ message.text }} from {{ message.name }}</li>
+    <li>{{ message.text }} from {{ message.username }} at {{ message.time }}</li>
   {{/each}}
 </ul>
 

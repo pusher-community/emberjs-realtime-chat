@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import $ from 'jquery';
 import ENV from 'pusher-chat/config/environment';
 
 export default Ember.Component.extend({
@@ -10,7 +11,7 @@ export default Ember.Component.extend({
       encrypted: true,
     }));
 
-    const channel = this.get('pusher').subscribe('chat-channel');
+    const channel = this.get('pusher').subscribe('messages');
 
     channel.bind('new_message', (data) => {
       this.get('messages').pushObject(data);
@@ -19,7 +20,16 @@ export default Ember.Component.extend({
   actions: {
     newMessage() {
       const text = this.get('newMessage');
-      const user = this.get('currentUser').user();
+      const username = this.get('currentUser').user();
+      const time = new Date();
+
+      $.ajax({
+        type: 'POST',
+        url: 'http://localhost:4567/messages',
+        data: { text, username, time },
+        dataType: 'json',
+        jsonp: false,
+      });
     }
   }
 });
