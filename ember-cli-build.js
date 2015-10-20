@@ -7,6 +7,8 @@ module.exports = function(defaults) {
   });
 
   app.import('bower_components/pusher/dist/pusher.min.js');
+  app.import('bower_components/strftime/strftime-min.js');
+  app.import('app/styles/devices.min.css');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

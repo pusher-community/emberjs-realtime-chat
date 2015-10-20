@@ -1,10 +1,36 @@
-<p>Currently logged in as: {{ username }}</p>
+<div class="text-center">
+  <div class="marvel-device iphone6 silver">
+    <div class="top-bar"></div>
+    <div class="sleep"></div>
+    <div class="volume"></div>
+    <div class="camera"></div>
+    <div class="sensor"></div>
+    <div class="speaker"></div>
+    <div class="screen">
+      <div class="light-grey-blue-background chat-app">
+        <div id="message-list">
+          <div class="time-divide" style="margin-top: 15px">
+            <span class="date">Today</span>
+          </div>
 
-<ul>
-  {{#each messages as |message|}}
-    <li>{{ message.text }} from {{ message.username }} at {{ message.time }}</li>
-  {{/each}}
-</ul>
-
-{{input value=newMessage placeholder="OMG"}}
-<button {{action "newMessage"}}>Send</button>
+          {{#each messages as |message|}}
+            <div class="message">
+              {{#chat-message message=message}}{{/chat-message}}
+            </div>
+          {{/each}}
+        </div>
+        <div class="action-bar">
+          <div class="option col-xs-1 white-background">
+            <span id="emoji" class="fa fa-smile-o light-grey"></span>
+          </div>
+          {{ textarea value=newMessage class="input-message col-xs-9" id="message-input" }}
+          <div class="option col-xs-1 green-background send-message" {{action "newMessage" }}>
+            <span class="white light fa fa-paper-plane-o"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home"></div>
+    <div class="bottom-bar"></div>
+  </div>
+</div>

@@ -1,11 +1,16 @@
-This is going to ask for the chat username
-
 {{#if nameIsSet}}
+  <h3 class="light white">Welcome <b>{{ userName }}</b></h3>
   {{#chat-messages username=userName}}{{/chat-messages}}
 {{else}}
-  {{input placeholder="jack" value=userName}}
+  <div style="margin-top: 20px">
+    <p class="light white">Enter your Twiter name and start chatting!</p>
+    <div style="margin-top: 20px">
+      {{input placeholder="jack" value=userName id="input-name" class="swish-input" }}
 
-  <button {{action "userSubmittedName"}}>
-    Start chat
-  </button>
+      <button {{action "userSubmittedName"}} class="bright-blue-hover btn-white" id="try-it-out">
+        Start chat
+      </button>
+    </div>
+  </div>
+
 {{/if}}

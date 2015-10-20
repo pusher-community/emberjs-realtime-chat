@@ -12,7 +12,8 @@
     "jquery": "^1.11.3",
     "loader.js": "ember-cli/loader.js#3.2.1",
     "qunit": "~1.18.0",
-    "pusher": "~3.0.0"
+    "pusher": "~3.0.0",
+    "strftime": "~0.9.2"
   },
   "resolutions": {
     "ember": "2.1.0"

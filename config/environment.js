@@ -51,7 +51,8 @@ module.exports = function(environment) {
     'script-src': "'self' https://stats.pusher.com/",
     'connect-src': "'self' wss://ws.pusherapp.com/ http://localhost:4567/",
     'img-src': "'self'",
-    'style-src': "'self'",
+    'style-src': "'self' fonts.googleapis.com http://d3dhju7igb20wy.cloudfront.net/ 'unsafe-inline'",
+    'font-src': "'self' fonts.gstatic.com http://d3dhju7igb20wy.cloudfront.net/",
     'media-src': "'self'",
   }
 

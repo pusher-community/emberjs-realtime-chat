@@ -1,0 +1,64 @@
+body {
+  height: 100vh;
+}
+
+.marvel-device.iphone6.silver {
+  margin-top: -30px;
+}
+
+.marvel-device .screen {
+  text-align: left;
+  z-index: 3;
+  color: inherit;
+  -webkit-box-shadow: inherit;
+  box-shadow: inherit;
+}
+
+.action-bar {
+  width: 330px;
+}
+
+.option {
+  width: 40px;
+  padding-top: 8px;
+}
+
+span.emoji {
+  font-family: initial;
+}
+
+#msg-input {
+  width: 245px;
+}
+
+.chat-app {
+  position: relative;
+  height: 100%;
+  padding-top: 0 !important;
+}
+
+.chat-app .action-bar {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+
+.swish-input {
+  /*height: 43px;*/
+}
+
+#try-it-out {
+  width: 160px;
+  font-weight: 200;
+  padding: 10px 16px;
+  vertical-align: bottom;
+}
+
+#message-list {
+  height: 420px;
+  overflow: scroll;
+}
+
+#input-name {
+  width: 350px;
+}
