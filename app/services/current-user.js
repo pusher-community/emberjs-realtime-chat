@@ -3,10 +3,6 @@ import Ember from 'ember';
 export default Ember.Service.extend({
   currentUser: null,
 
-  init() {
-    this._super(...arguments);
-  },
-
   user() {
     return this.get('currentUser');
   },

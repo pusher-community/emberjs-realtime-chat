@@ -1,6 +1,5 @@
 import Ember from 'ember';
 import $ from 'jquery';
-import ENV from 'pusher-chat/config/environment';
 
 export default Ember.Component.extend({
   currentUser: Ember.inject.service('current-user'),

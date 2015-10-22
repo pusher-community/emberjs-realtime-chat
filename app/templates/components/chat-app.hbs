@@ -1,0 +1,8 @@
+{{#if nameIsSet}}
+  <h3 class="light white">Welcome <b>{{ userName }}</b></h3>
+  {{#chat-messages username=userName}}{{/chat-messages}}
+{{else}}
+  <div style="margin-top: 20px">
+    {{#chat-username}}{{/chat-username}}
+  </div>
+{{/if}}

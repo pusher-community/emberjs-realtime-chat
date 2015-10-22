@@ -1,16 +1,8 @@
-{{#if nameIsSet}}
-  <h3 class="light white">Welcome <b>{{ userName }}</b></h3>
-  {{#chat-messages username=userName}}{{/chat-messages}}
-{{else}}
-  <div style="margin-top: 20px">
-    <p class="light white">Enter your Twiter name and start chatting!</p>
-    <div style="margin-top: 20px">
-      {{input placeholder="jack" value=userName id="input-name" class="swish-input" }}
+<p class="light white">Enter your Twiter name and start chatting!</p>
+<div style="margin-top: 20px">
+  {{input placeholder="jack" value=userName id="input-name" class="swish-input" }}
 
-      <button {{action "userSubmittedName"}} class="bright-blue-hover btn-white" id="try-it-out">
-        Start chat
-      </button>
-    </div>
-  </div>
-
-{{/if}}
+  <button {{action "userSubmittedName"}} class="bright-blue-hover btn-white" id="try-it-out">
+    Start chat
+  </button>
+</div>
