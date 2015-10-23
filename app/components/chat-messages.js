@@ -24,13 +24,7 @@ export default Ember.Component.extend({
       const username = this.get('currentUser').user();
       const time = new Date();
 
-      $.ajax({
-        type: 'POST',
-        url: 'http://localhost:4567/messages',
-        data: { text, username, time },
-        dataType: 'json',
-        jsonp: false,
-      });
+      $.post('http://localhost:4567/messages', { text, username, time });
     }
   }
 });

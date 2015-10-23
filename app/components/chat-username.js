@@ -5,7 +5,6 @@ export default Ember.Component.extend({
   actions: {
     userSubmittedName() {
       this.get('currentUser').setUser(this.get('userName'));
-      this.set('nameIsSet', true);
     },
   }
 });
