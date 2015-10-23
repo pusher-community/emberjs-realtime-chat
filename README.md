@@ -15,8 +15,8 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* change into the new directory
+* `git clone git@github.com:pusher-community/emberjs-realtime-chat.git` this repository
+* `cd emberjs-realtime-chat`
 * `npm install`
 * `bower install`
 
@@ -24,6 +24,7 @@ You will need the following things properly installed on your computer.
 
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
+* You'll need the [Sinatra Server](https://github.com/pusher-community/sinatra-realtime-server) running on port `4567` too.
 
 ## Further Reading / Useful Links
 
