@@ -20,13 +20,12 @@
           {{/each}}
         </div>
         <div class="action-bar">
-          <div class="option col-xs-1 white-background">
-            <span id="emoji" class="fa fa-smile-o light-grey"></span>
-          </div>
-          {{ textarea value=newMessage class="input-message col-xs-9" id="message-input" }}
-          <div class="option col-xs-1 green-background send-message" {{action "newMessage" }}>
-            <span class="white light fa fa-paper-plane-o"></span>
-          </div>
+          <form>
+            {{ input value=newMessage class="input-message col-xs-10" id="message-input" }}
+            <button type="submit" class="option col-xs-1 green-background send-message" {{action "newMessage" }}>
+              <span class="white light fa fa-paper-plane-o"></span>
+            </button>
+          </form>
         </div>
       </div>
     </div>

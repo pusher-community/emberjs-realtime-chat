@@ -19,7 +19,7 @@ body {
 }
 
 .option {
-  width: 40px;
+  width: 42px;
   padding-top: 8px;
 }
 
@@ -43,10 +43,6 @@ span.emoji {
   bottom: 0;
 }
 
-.swish-input {
-  /*height: 43px;*/
-}
-
 #try-it-out {
   width: 160px;
   font-weight: 200;
@@ -61,4 +57,20 @@ span.emoji {
 
 #input-name {
   width: 350px;
+}
+
+.chat-app .action-bar button.option.send-message {
+  border-radius: 0;
+  padding-top: 0;
+}
+
+input.input-message {
+  display: inline-block;
+  width: 87%;
+}
+
+input.input-message:focus,
+input.input-message:hover {
+  outline: none;
+  box-shadow: none;
 }

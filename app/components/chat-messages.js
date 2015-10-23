@@ -12,6 +12,11 @@ export default Ember.Component.extend({
       text: message,
     };
   }),
+  messageObserver: Ember.observer('messages.length', function() {
+    Ember.run.scheduleOnce('afterRender', function() {
+      $("#message-list").scrollTop($("#message-list").height());
+    });
+  }),
   init() {
     this._super(...arguments);
 
@@ -22,12 +27,17 @@ export default Ember.Component.extend({
   actions: {
     newMessage() {
       const text = this.get('newMessage');
+
+      if (!text) return;
+
       const username = this.get('currentUser').user();
       const time = new Date();
 
       const urlBase = ENV.APP.SERVER_URL;
 
       $.post(`${urlBase}/messages`, { text, username, time });
+
+      this.set('newMessage', '');
     }
   }
 });
