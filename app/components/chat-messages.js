@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import $ from 'jquery';
+import ENV from 'pusher-chat/config/environment';
 
 export default Ember.Component.extend({
   currentUser: Ember.inject.service('current-user'),
@@ -24,7 +25,9 @@ export default Ember.Component.extend({
       const username = this.get('currentUser').user();
       const time = new Date();
 
-      $.post('http://localhost:4567/messages', { text, username, time });
+      const urlBase = ENV.APP.SERVER_URL;
+
+      $.post(`${urlBase}/messages`, { text, username, time });
     }
   }
 });

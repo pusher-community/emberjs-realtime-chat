@@ -23,6 +23,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.APP.SERVER_URL = 'http://localhost:4567';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
@@ -43,6 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.APP.SERVER_URL = 'https://pusher-chat-sinatra.herokuapp.com';
 
   }
 
