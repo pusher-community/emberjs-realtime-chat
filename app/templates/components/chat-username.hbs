@@ -1,8 +1,10 @@
 <p class="light white">Enter your Twitter name and start chatting!</p>
 <div style="margin-top: 20px">
-  {{input placeholder="jack" value=userName id="input-name" class="swish-input" }}
+  <form>
+    {{input placeholder="Enter your Twitter name!" value=userName id="input-name" class="swish-input" }}
 
-  <button {{action "userSubmittedName"}} class="bright-blue-hover btn-white" id="try-it-out">
-    Start chat
-  </button>
+    <button type="submit" {{action "userSubmittedName"}} class="bright-blue-hover btn-white" id="try-it-out">
+      Start chat
+    </button>
+  </form>
 </div>

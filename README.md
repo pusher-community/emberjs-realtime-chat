@@ -2,6 +2,8 @@
 
 This is an example EmberJS chat application built with Pusher.
 
+[You can see this app running on Heroku](http://emberjs-realtime-chat.herokuapp.com/).
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
