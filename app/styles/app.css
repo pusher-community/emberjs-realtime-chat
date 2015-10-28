@@ -74,3 +74,14 @@ input.input-message:hover {
   outline: none;
   box-shadow: none;
 }
+
+.ember-logo img {
+  width: 230px;
+  position: absolute;
+  top: -42px;
+}
+
+.splash-title {
+  padding-right: 240px;
+  position: relative;
+}
