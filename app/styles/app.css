@@ -75,13 +75,8 @@ input.input-message:hover {
   box-shadow: none;
 }
 
-.ember-logo img {
-  width: 230px;
-  position: absolute;
-  top: -42px;
-}
-
-.splash-title {
-  padding-right: 240px;
-  position: relative;
+.red-gradient-background {
+  background: #fe845a;
+  background-image: -webkit-linear-gradient(top, #fe845a, #d14e37);
+  background-image: linear-gradient(to bottom, #fe845a, #d14e37);
 }
