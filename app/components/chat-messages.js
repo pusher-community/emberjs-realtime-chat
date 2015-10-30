@@ -3,7 +3,7 @@ import $ from 'jquery';
 import ENV from 'pusher-chat/config/environment';
 
 export default Ember.Component.extend({
-  currentUser: Ember.inject.service('current-user'),
+  currentUserService: Ember.inject.service('current-user'),
   pusher: Ember.inject.service('pusher'),
   messages: ['Hi there!', 'Welcome to your chat app!'].map((message) => {
     return {
@@ -30,7 +30,7 @@ export default Ember.Component.extend({
 
       if (!text) return;
 
-      const username = this.get('currentUser').user();
+      const username = this.get('currentUserService').get('user');
       const time = new Date();
 
       const urlBase = ENV.APP.SERVER_URL;

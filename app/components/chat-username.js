@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  currentUser: Ember.inject.service(),
+  currentUserService: Ember.inject.service('current-user'),
   actions: {
     userSubmittedName() {
-      this.get('currentUser').setUser(this.get('userName'));
+      this.get('currentUserService').setUser(this.get('userName'));
     },
   }
 });

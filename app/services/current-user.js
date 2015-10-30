@@ -1,17 +1,13 @@
 import Ember from 'ember';
 
 export default Ember.Service.extend({
-  currentUser: null,
-
-  user() {
-    return this.get('currentUser');
-  },
+  user: null,
 
   setUser(username) {
-    this.set('currentUser', username);
+    this.set('user', username);
   },
 
   hasUser() {
-    return this.get('currentUser') != undefined;
+    return this.get('user') != undefined;
   }
 });

@@ -1,8 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  currentUser: Ember.inject.service(),
-  nameIsSet: Ember.computed('currentUser.currentUser', function() {
-    return this.get('currentUser').hasUser();
+  currentUserService: Ember.inject.service('current-user'),
+  nameIsSet: Ember.computed('currentUserService.user', function() {
+    return this.get('currentUserService').hasUser();
   })
 });
